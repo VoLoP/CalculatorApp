@@ -22,7 +22,7 @@ namespace CalculatorApp
         {
             if (v2 == 0)
             {
-                throw new DivideByZeroException("Division by zero is not allowed.");
+                throw new DivideByZeroException("Division by zero is not allowed");
             }
             return (double)v1 / v2;
         }
