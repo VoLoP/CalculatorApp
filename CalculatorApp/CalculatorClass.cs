@@ -1,4 +1,6 @@
 ﻿
+using NUnit.Framework;
+
 namespace CalculatorApp
 {
     public class CalculatorClass

@@ -64,5 +64,17 @@ namespace CalculatorAppTest
         //
         //    Assert.Throws<DivideByZeroException>(action, "Division by zero must throw DivideByZeroException");
         //}
+
+        [TestCase(1, 2, 3)]
+        [TestCase(-1, -1, -2)]
+        [TestCase(0, 0, 0)]
+        public void AddTestCases(int v1, int v2, int expected)
+        {
+            // Act
+            var result = myCalc.Add(v1, v2);
+
+            // Assert
+            Assert.That(result, Is.EqualTo(expected), $"{v1} + {v2} must return {expected}");
+        }
     }
 }
