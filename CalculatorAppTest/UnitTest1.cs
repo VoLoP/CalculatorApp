@@ -1,10 +1,13 @@
+using CalculatorApp;
+
 namespace CalculatorAppTest
 {
     public class Tests
     {
-        [SetUp]
-
+        public int MyProperty { get; private set; }
         CalculatorClass myCalc;
+
+        [SetUp]
         public void Setup()
         {
             myCalc = new CalculatorClass();
