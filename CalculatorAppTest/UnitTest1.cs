@@ -20,6 +20,16 @@ namespace CalculatorAppTest
             Assert.That(res, Is.EqualTo(5), "3+2 must return 5");
         }
         [Test]
+        public void EnterTwoValidNumbersReturnsAValidNumber1()
+        {
+            int v1 = 2;
+            int v2 = 3;
+
+            var res = myCalc.Add(v1, v2);
+
+            Assert.That(res, Is.EqualTo(5), "2 + 3 must return 5");
+        }
+        [Test]
         public void SubtractTwoValidNumbersReturnsAValidNumber()
         {
             var res = myCalc.Subtract(5, 3);
