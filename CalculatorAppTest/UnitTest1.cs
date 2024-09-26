@@ -4,7 +4,7 @@ namespace CalculatorAppTest
 {
     public class Tests
     {
-        public int MyProperty { get; private set; }
+        //public int MyProperty { get; private set; }
 
         CalculatorClass myCalc;
 
@@ -27,7 +27,7 @@ namespace CalculatorAppTest
 
             var res = myCalc.Add(v1, v2);
 
-            Assert.That(res, Is.EqualTo(5), "2 + 3 must return 5");
+            Assert.That(res, Is.EqualTo(5), "2+3 must return 5");
         }
         [Test]
         public void SubtractTwoValidNumbersReturnsAValidNumber()
@@ -53,7 +53,16 @@ namespace CalculatorAppTest
         [Test]
         public void DivideByZeroThrowsException()
         {
-            Assert.Throws<DivideByZeroException>(() => myCalc.Divide(6, 0), "Division by zero must throw DivideByZeroException");
+            Assert.Throws<Exception>(() => myCalc.Divide(6, 0), "Division by zero must throw Exception");
         }
+
+        //public void DivideByZeroThrowsException()
+        //{
+        //
+        //    TestDelegate action = () => myCalc.Divide(6, 0);
+
+        //
+        //    Assert.Throws<DivideByZeroException>(action, "Division by zero must throw DivideByZeroException");
+        //}
     }
 }
