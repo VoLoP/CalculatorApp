@@ -7,5 +7,24 @@ namespace CalculatorApp
         {
             return v1 + v2;
         }
+
+        public int Subtract(int v1, int v2)
+        {
+            return v1 - v2;
+        }
+
+        public int Multiply(int v1, int v2)
+        {
+            return v1 * v2;
+        }
+
+        public double Divide(int v1, int v2)
+        {
+            if (v2 == 0)
+            {
+                throw new DivideByZeroException("Division by zero is not allowed.");
+            }
+            return (double)v1 / v2;
+        }
     }
 }

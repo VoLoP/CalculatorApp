@@ -5,6 +5,7 @@ namespace CalculatorAppTest
     public class Tests
     {
         public int MyProperty { get; private set; }
+
         CalculatorClass myCalc;
 
         [SetUp]
